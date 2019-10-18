@@ -5,9 +5,7 @@ def sherlockAndAnagrams(s):
             temp_dict = {}
             for jj in s[i:j]:
                 temp_dict[jj] = temp_dict.get(jj,0)+1
-            if not frozenset(temp_dict.items()) in freq:
-                freq[frozenset(temp_dict.items())] = 0
-            freq[frozenset(temp_dict.items())] += 1
+            freq[frozenset(temp_dict.items())] = freq.get(frozenset(temp_dict.items()),0)+1
     res = 0
     for count in freq.values():
         res += count*(count-1)/2
