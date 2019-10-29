@@ -1,7 +1,7 @@
 def sherlockAndAnagrams(s):
     freq = {}
     for i in range(len(s)):
-        for j in range(i + 1, len(s) + 1):
+        for j in range(i+1 , len(s) + 1):
             temp_dict = {}
             for jj in s[i:j]:
                 temp_dict[jj] = temp_dict.get(jj,0)+1
